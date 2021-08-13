@@ -19,8 +19,10 @@ go run cel_eval.go
 
 For cases of no plugin, output should be `Hello world!`, with just prefix plugin, output should be `CEL, Hello world!`, with both prefix and suffix plugin, output should be `CEL, Hello world! Done.`.
 
-## Next steps
+## Some notes:
 
-- If it's too complex for user to implement CEL library, can just let user to implement their function and convert to a `FunctionOp` in CEL.
+- User must implement their own functions as CEL library.
 
-- To integrate with variable store controller, can watch the plugins directory or watch a configmap which will have the `.so` file list updated during user registration stage, and then force the controller to load the plugins found.
+- To integrate with the cel-eval controller, can watch the plugins directory or watch a configmap which will have the `.so` file list updated during user registration stage, and then force the controller to load the plugins found.
+
+- Consider controller scale out case, the `.so` files should be located on shared storage which can be a volume to mount.
