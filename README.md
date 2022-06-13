@@ -17,7 +17,7 @@ Run the cel evaluation:
 go run cel_eval.go
 ```
 
-For cases of no plugin, output should be `Hello world!`, with just prefix plugin, output should be `CEL, Hello world!`, with both prefix and suffix plugin, output should be `CEL, Hello world! Done.`.
+For cases of no plugin, output should be `Hello world!`, with just prefix plugin, output should be `CEL, Hello world!`, with both prefix and suffix plugin, output should be `CEL, Hello world! Done.`
 
 ## Some notes:
 
